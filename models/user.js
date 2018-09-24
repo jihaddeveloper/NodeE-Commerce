@@ -10,7 +10,7 @@ var userSchema = new Schema({
     password: { type: String,required: true, minlength: 5 }
 });
 
-const User = module.exports = mongoose.model('User', userSchema);
+const User = module.exports = mongoose.model('User', userSchema, 'users');
 
 //Create New User
 module.exports.createUser = function(newUser, callback){
